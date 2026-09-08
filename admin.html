@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareerHub - Admin Panel</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR OVERLAY -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+            <a href="#" class="logo">
+                <span class="logo-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </span>
+                Career<span>Hub</span>
+            </a>
+
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="admin-label">
+            ADMIN PANEL
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="#dashboard" class="nav-item active">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#jobs" class="nav-item">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Jobs</span>
+                <b>24</b>
+            </a>
+
+            <a href="#applications" class="nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Applications</span>
+                <b class="notification-count">18</b>
+            </a>
+
+            <a href="#candidates" class="nav-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Candidates</span>
+            </a>
+
+            <a href="#companies" class="nav-item">
+                <i class="fa-solid fa-building"></i>
+                <span>Companies</span>
+            </a>
+
+            <a href="#messages" class="nav-item">
+                <i class="fa-solid fa-message"></i>
+                <span>Messages</span>
+            </a>
+
+            <div class="nav-divider"></div>
+
+            <a href="#settings" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-circle-question"></i>
+                <span>Help & Support</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="upgrade-card">
+                <div class="upgrade-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+
+                <h4>Upgrade Plan</h4>
+                <p>Get more features and grow faster.</p>
+
+                <button>Upgrade Now</button>
+            </div>
+
+            <button class="logout-btn" id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="topbar-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Search anything...">
+            </div>
+
+            <div class="topbar-actions">
+
+                <button class="icon-btn">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <button class="icon-btn">
+                    <i class="fa-regular fa-envelope"></i>
+                </button>
+
+                <div class="admin-profile">
+
+                    <div class="admin-avatar">
+                        AD
+                    </div>
+
+                    <div class="admin-info">
+                        <strong>Admin</strong>
+                        <span>Administrator</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD ================= -->
+        <section class="dashboard-page" id="dashboard">
+
+            <div class="page-heading">
+
+                <div>
+                    <span class="page-label">OVERVIEW</span>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back! Here's what's happening today.</p>
+                </div>
+
+                <div class="heading-actions">
+                    <button class="outline-btn">
+                        <i class="fa-regular fa-calendar"></i>
+                        Sep 2026
+                    </button>
+
+                    <button class="primary-btn" id="addJobBtn">
+                        <i class="fa-solid fa-plus"></i>
+                        Add New Job
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- ================= STATS ================= -->
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+                        <div class="stat-icon purple">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            12.5%
+                        </span>
+                    </div>
+
+                    <h2 id="totalJobs">1,248</h2>
+                    <p>Total Jobs</p>
+
+                    <div class="stat-progress">
+                        <span style="width: 75%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+                        <div class="stat-icon blue">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            8.2%
+                        </span>
+                    </div>
+
+                    <h2>25,480</h2>
+                    <p>Total Candidates</p>
+
+                    <div class="stat-progress">
+                        <span style="width: 68%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+                        <div class="stat-icon orange">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            18.4%
+                        </span>
+                    </div>
+
+                    <h2>8,642</h2>
+                    <p>Applications</p>
+
+                    <div class="stat-progress">
+                        <span style="width: 82%;"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+                        <div class="stat-icon green">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            5.7%
+                        </span>
+                    </div>
+
+                    <h2>856</h2>
+                    <p>Companies</p>
+
+                    <div class="stat-progress">
+                        <span style="width: 58%;"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= ANALYTICS ================= -->
+            <div class="analytics-grid">
+
+                <div class="panel chart-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h3>Application Overview</h3>
+                            <p>Application statistics for the last 6 months</p>
+                        </div>
+
+                        <select id="chartFilter">
+                            <option>Last 6 months</option>
+                            <option>Last 12 months</option>
+                            <option>This year</option>
+                        </select>
+
+                    </div>
+
+                    <div class="chart">
+
+                        <div class="chart-y">
+                            <span>1000</span>
+                            <span>800</span>
+                            <span>600</span>
+                            <span>400</span>
+                            <span>200</span>
+                            <span>0</span>
+                        </div>
+
+                        <div class="chart-area">
+
+                            <div class="chart-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="bars">
+
+                                <div class="bar-group">
+                                    <div class="bar" style="height: 42%;"></div>
+                                    <small>Apr</small>
+                                </div>
+
+                                <div class="bar-group">
+                                    <div class="bar" style="height: 57%;"></div>
+                                    <small>May</small>
+                                </div>
+
+                                <div class="bar-group">
+                                    <div class="bar" style="height: 48%;"></div>
+                                    <small>Jun</small>
+                                </div>
+
+                                <div class="bar-group">
+                                    <div class="bar" style="height: 72%;"></div>
+                                    <small>Jul</small>
+                                </div>
+
+                                <div class="bar-group">
+                                    <div class="bar" style="height: 66%;"></div>
+                                    <small>Aug</small>
+                                </div>
+
+                                <div class="bar-group">
+                                    <div class="bar active-bar" style="height: 84%;"></div>
+                                    <small>Sep</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- JOB STATUS -->
+                <div class="panel status-panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <h3>Job Status</h3>
+                            <p>Current job distribution</p>
+                        </div>
+
+                        <button class="more-btn">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </div>
+
+                    <div class="donut-wrapper">
+
+                        <div class="donut">
+                            <div class="donut-center">
+                                <strong>1,248</strong>
+                                <span>Total Jobs</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="status-list">
+
+                        <div>
+                            <span>
+                                <i class="status-dot published"></i>
+                                Published
+                            </span>
+                            <strong>856</strong>
+                        </div>
+
+                        <div>
+                            <span>
+                                <i class="status-dot pending"></i>
+                                Pending
+                            </span>
+                            <strong>214</strong>
+                        </div>
+
+                        <div>
+                            <span>
+                                <i class="status-dot closed"></i>
+                                Closed
+                            </span>
+                            <strong>178</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= RECENT JOBS ================= -->
+            <div class="panel recent-jobs" id="jobs">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h3>Recent Jobs</h3>
+                        <p>Recently posted jobs on CareerHub</p>
+                    </div>
+
+                    <button class="view-all-btn" id="viewAllJobs">
+                        View All
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>JOB</th>
+                                <th>COMPANY</th>
+                                <th>LOCATION</th>
+                                <th>TYPE</th>
+                                <th>APPLICANTS</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="jobsTableBody">
+
+                            <tr>
+                                <td>
+                                    <div class="job-cell">
+                                        <div class="table-logo purple-logo">
+                                            <i class="fa-solid fa-code"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>Senior Frontend Developer</strong>
+                                            <span>Posted 2 days ago</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>TechNova</td>
+                                <td>
+                                    <i class="fa-solid fa-location-dot table-icon"></i>
+                                    Hyderabad
+                                </td>
+
+                                <td>
+                                    <span class="type-badge fulltime">
+                                        Full-time
+                                    </span>
+                                </td>
+
+                                <td>126</td>
+
+                                <td>
+                                    <span class="status-badge published-badge">
+                                        Published
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="edit-btn">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+
+                                        <button class="delete-btn">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="job-cell">
+                                        <div class="table-logo orange-logo">
+                                            <i class="fa-solid fa-palette"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>Product UI/UX Designer</strong>
+                                            <span>Posted 3 days ago</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>CreativeLabs</td>
+                                <td>
+                                    <i class="fa-solid fa-location-dot table-icon"></i>
+                                    Bangalore
+                                </td>
+
+                                <td>
+                                    <span class="type-badge fulltime">
+                                        Full-time
+                                    </span>
+                                </td>
+
+                                <td>94</td>
+
+                                <td>
+                                    <span class="status-badge published-badge">
+                                        Published
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="edit-btn">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+
+                                        <button class="delete-btn">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="job-cell">
+                                        <div class="table-logo blue-logo">
+                                            <i class="fa-solid fa-database"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>Data Analyst</strong>
+                                            <span>Posted 4 days ago</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>DataWorks</td>
+                                <td>
+                                    <i class="fa-solid fa-location-dot table-icon"></i>
+                                    Pune
+                                </td>
+
+                                <td>
+                                    <span class="type-badge remote">
+                                        Remote
+                                    </span>
+                                </td>
+
+                                <td>72</td>
+
+                                <td>
+                                    <span class="status-badge pending-badge">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="edit-btn">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+
+                                        <button class="delete-btn">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="job-cell">
+                                        <div class="table-logo green-logo">
+                                            <i class="fa-solid fa-cloud"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>Backend Developer</strong>
+                                            <span>Posted 5 days ago</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>CloudTech</td>
+                                <td>
+                                    <i class="fa-solid fa-location-dot table-icon"></i>
+                                    Delhi
+                                </td>
+
+                                <td>
+                                    <span class="type-badge remote">
+                                        Remote
+                                    </span>
+                                </td>
+
+                                <td>61</td>
+
+                                <td>
+                                    <span class="status-badge published-badge">
+                                        Published
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="edit-btn">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+
+                                        <button class="delete-btn">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= BOTTOM GRID ================= -->
+            <div class="bottom-grid">
+
+                <!-- APPLICATIONS -->
+                <div class="panel applications-panel" id="applications">
+
+                    <div class="panel-header">
+                        <div>
+                            <h3>Recent Applications</h3>
+                            <p>Latest candidate applications</p>
+                        </div>
+
+                        <button class="more-btn">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </div>
+
+                    <div class="application-list">
+
+                        <div class="application-item">
+
+                            <div class="candidate-avatar avatar-one">
+                                AS
+                            </div>
+
+                            <div class="candidate-info">
+                                <strong>Arjun Sharma</strong>
+                                <span>Frontend Developer</span>
+                            </div>
+
+                            <span class="application-status new">
+                                New
+                            </span>
+
+                        </div>
+
+
+                        <div class="application-item">
+
+                            <div class="candidate-avatar avatar-two">
+                                PK
+                            </div>
+
+                            <div class="candidate-info">
+                                <strong>Priya Kumar</strong>
+                                <span>UI/UX Designer</span>
+                            </div>
+
+                            <span class="application-status review">
+                                Review
+                            </span>
+
+                        </div>
+
+
+                        <div class="application-item">
+
+                            <div class="candidate-avatar avatar-three">
+                                RM
+                            </div>
+
+                            <div class="candidate-info">
+                                <strong>Rahul Mehta</strong>
+                                <span>Data Analyst</span>
+                            </div>
+
+                            <span class="application-status interview">
+                                Interview
+                            </span>
+
+                        </div>
+
+
+                        <div class="application-item">
+
+                            <div class="candidate-avatar avatar-four">
+                                SK
+                            </div>
+
+                            <div class="candidate-info">
+                                <strong>Sneha Kapoor</strong>
+                                <span>Product Manager</span>
+                            </div>
+
+                            <span class="application-status new">
+                                New
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TOP COMPANIES -->
+                <div class="panel companies-panel" id="companies">
+
+                    <div class="panel-header">
+                        <div>
+                            <h3>Top Companies</h3>
+                            <p>Companies with most jobs</p>
+                        </div>
+
+                        <button class="more-btn">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </div>
+
+                    <div class="company-ranking">
+
+                        <div class="company-rank">
+                            <span class="rank-number">01</span>
+
+                            <div class="rank-logo">
+                                <i class="fa-brands fa-google"></i>
+                            </div>
+
+                            <div class="rank-info">
+                                <strong>Google</strong>
+                                <span>124 active jobs</span>
+                            </div>
+
+                            <div class="rank-growth">
+                                +18%
+                            </div>
+                        </div>
+
+
+                        <div class="company-rank">
+                            <span class="rank-number">02</span>
+
+                            <div class="rank-logo microsoft">
+                                <i class="fa-brands fa-microsoft"></i>
+                            </div>
+
+                            <div class="rank-info">
+                                <strong>Microsoft</strong>
+                                <span>98 active jobs</span>
+                            </div>
+
+                            <div class="rank-growth">
+                                +14%
+                            </div>
+                        </div>
+
+
+                        <div class="company-rank">
+                            <span class="rank-number">03</span>
+
+                            <div class="rank-logo amazon-logo">
+                                <i class="fa-brands fa-amazon"></i>
+                            </div>
+
+                            <div class="rank-info">
+                                <strong>Amazon</strong>
+                                <span>87 active jobs</span>
+                            </div>
+
+                            <div class="rank-growth">
+                                +11%
+                            </div>
+                        </div>
+
+
+                        <div class="company-rank">
+                            <span class="rank-number">04</span>
+
+                            <div class="rank-logo">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+
+                            <div class="rank-info">
+                                <strong>Infosys</strong>
+                                <span>74 active jobs</span>
+                            </div>
+
+                            <div class="rank-growth">
+                                +9%
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= ADD JOB MODAL ================= -->
+    <div class="modal-overlay" id="jobModal">
+
+        <div class="modal">
+
+            <button class="modal-close" id="modalClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+
+                <div>
+                    <h2>Add New Job</h2>
+                    <p>Create a new job listing.</p>
+                </div>
+            </div>
+
+
+            <form id="jobForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label>Job Title</label>
+                        <input
+                            type="text"
+                            id="jobTitle"
+                            placeholder="e.g. Frontend Developer"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Company</label>
+                        <input
+                            type="text"
+                            id="jobCompany"
+                            placeholder="Company name"
+                            required>
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input
+                            type="text"
+                            id="jobLocation"
+                            placeholder="e.g. Hyderabad"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Job Type</label>
+
+                        <select id="jobType" required>
+                            <option value="">Select type</option>
+                            <option>Full-time</option>
+                            <option>Part-time</option>
+                            <option>Remote</option>
+                            <option>Internship</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label>Salary</label>
+                        <input
+                            type="text"
+                            id="jobSalary"
+                            placeholder="e.g. ₹8 - ₹12 LPA"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Category</label>
+
+                        <select id="jobCategory" required>
+                            <option value="">Select category</option>
+                            <option>Technology</option>
+                            <option>Design</option>
+                            <option>Marketing</option>
+                            <option>Finance</option>
+                            <option>Healthcare</option>
+                            <option>Sales</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label>Job Description</label>
+                    <textarea
+                        id="jobDescription"
+                        rows="4"
+                        placeholder="Write job description..."
+                        required></textarea>
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button type="button" class="cancel-btn" id="cancelJob">
+                        Cancel
+                    </button>
+
+                    <button type="submit" class="save-btn">
+                        <i class="fa-solid fa-check"></i>
+                        Publish Job
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= DELETE MODAL ================= -->
+    <div class="modal-overlay" id="deleteModal">
+
+        <div class="delete-modal">
+
+            <div class="delete-icon">
+                <i class="fa-solid fa-trash"></i>
+            </div>
+
+            <h2>Delete Job?</h2>
+
+            <p>
+                Are you sure you want to delete this job?
+                This action cannot be undone.
+            </p>
+
+            <div class="delete-actions">
+                <button id="cancelDelete">
+                    Cancel
+                </button>
+
+                <button id="confirmDelete">
+                    Delete Job
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="admin.js"></script>
+
+</body>
+</html>
