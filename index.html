@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareerHub - Find Your Dream Job</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </span>
+                Career<span>Hub</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="active">Home</a>
+                <a href="#jobs">Find Jobs</a>
+                <a href="#categories">Categories</a>
+                <a href="#companies">Companies</a>
+                <a href="#about">About</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="login-btn" id="loginBtn">Login</button>
+                <button class="post-job-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Post a Job
+                </button>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+
+            <div class="hero-text">
+                <span class="hero-badge">
+                    <i class="fa-solid fa-star"></i>
+                    #1 Job Portal for Professionals
+                </span>
+
+                <h1>
+                    Find the job that
+                    <span>fits your life.</span>
+                </h1>
+
+                <p>
+                    Discover thousands of job opportunities from top companies
+                    and take the next step in your career.
+                </p>
+
+                <!-- Search -->
+                <div class="search-box">
+
+                    <div class="search-field">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            type="text"
+                            id="keywordInput"
+                            placeholder="Job title, keyword or company">
+                    </div>
+
+                    <div class="search-divider"></div>
+
+                    <div class="search-field">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input
+                            type="text"
+                            id="locationInput"
+                            placeholder="City or location">
+                    </div>
+
+                    <button class="search-btn" id="searchBtn">
+                        Search Jobs
+                    </button>
+
+                </div>
+
+                <div class="popular-searches">
+                    <strong>Popular:</strong>
+                    <button data-keyword="Frontend Developer">Frontend Developer</button>
+                    <button data-keyword="UI/UX Designer">UI/UX Designer</button>
+                    <button data-keyword="Data Analyst">Data Analyst</button>
+                    <button data-keyword="Marketing">Marketing</button>
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+                <div class="hero-card main-card">
+                    <div class="floating-icon">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+
+                    <h3>Find your dream job</h3>
+                    <p>Connect with companies that value your talent.</p>
+
+                    <div class="mini-stat">
+                        <div class="avatars">
+                            <span>JD</span>
+                            <span>MK</span>
+                            <span>AS</span>
+                            <span>+</span>
+                        </div>
+                        <div>
+                            <strong>50K+</strong>
+                            <small>Happy Candidates</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="floating-job-card card-one">
+                    <div class="company-logo google">
+                        G
+                    </div>
+                    <div>
+                        <strong>Software Engineer</strong>
+                        <small>Google · Hyderabad</small>
+                    </div>
+                </div>
+
+                <div class="floating-job-card card-two">
+                    <div class="company-logo amazon">
+                        <i class="fa-brands fa-amazon"></i>
+                    </div>
+                    <div>
+                        <strong>Product Designer</strong>
+                        <small>Amazon · Bangalore</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= STATS ================= -->
+    <section class="stats-section">
+        <div class="container stats">
+
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <div>
+                    <h3>50,000+</h3>
+                    <p>Active Jobs</p>
+                </div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+                <div>
+                    <h3>8,500+</h3>
+                    <p>Companies</p>
+                </div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div>
+                    <h3>1.2M+</h3>
+                    <p>Job Seekers</p>
+                </div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div>
+                    <h3>25,000+</h3>
+                    <p>Successful Hires</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+    <section class="section" id="categories">
+        <div class="container">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">EXPLORE OPPORTUNITIES</span>
+                    <h2>Browse by category</h2>
+                </div>
+
+                <a href="#jobs" class="view-all">
+                    View all categories
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="category-grid">
+
+                <div class="category-card" data-category="Technology">
+                    <div class="category-icon purple">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>Technology</h3>
+                    <p>12,450 Jobs</p>
+                </div>
+
+                <div class="category-card" data-category="Design">
+                    <div class="category-icon orange">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </div>
+                    <h3>Design & Creative</h3>
+                    <p>5,280 Jobs</p>
+                </div>
+
+                <div class="category-card" data-category="Marketing">
+                    <div class="category-icon blue">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3>Marketing</h3>
+                    <p>4,750 Jobs</p>
+                </div>
+
+                <div class="category-card" data-category="Finance">
+                    <div class="category-icon green">
+                        <i class="fa-solid fa-coins"></i>
+                    </div>
+                    <h3>Finance</h3>
+                    <p>3,920 Jobs</p>
+                </div>
+
+                <div class="category-card" data-category="Healthcare">
+                    <div class="category-icon pink">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p>3,640 Jobs</p>
+                </div>
+
+                <div class="category-card" data-category="Sales">
+                    <div class="category-icon yellow">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3>Sales</h3>
+                    <p>2,850 Jobs</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= JOBS ================= -->
+    <section class="section jobs-section" id="jobs">
+        <div class="container">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">LATEST OPPORTUNITIES</span>
+                    <h2>Featured jobs</h2>
+                </div>
+
+                <div class="sort-wrapper">
+                    <label for="sortJobs">Sort:</label>
+                    <select id="sortJobs">
+                        <option value="latest">Latest</option>
+                        <option value="salary">Highest Salary</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="jobs-layout">
+
+                <!-- Filters -->
+                <aside class="filter-sidebar">
+
+                    <div class="filter-header">
+                        <h3>Filters</h3>
+                        <button id="clearFilters">Clear all</button>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Job Type</h4>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Full-time" class="job-type">
+                            <span>Full-time</span>
+                            <small>1,245</small>
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Part-time" class="job-type">
+                            <span>Part-time</span>
+                            <small>428</small>
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Remote" class="job-type">
+                            <span>Remote</span>
+                            <small>890</small>
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Internship" class="job-type">
+                            <span>Internship</span>
+                            <small>312</small>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Experience</h4>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Entry Level" class="experience">
+                            <span>Entry Level</span>
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Mid Level" class="experience">
+                            <span>Mid Level</span>
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Senior Level" class="experience">
+                            <span>Senior Level</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Salary</h4>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="0-5" class="salary">
+                            <span>₹0 - ₹5 LPA</span>
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="5-10" class="salary">
+                            <span>₹5 - ₹10 LPA</span>
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="10-20" class="salary">
+                            <span>₹10 - ₹20 LPA</span>
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="20+" class="salary">
+                            <span>₹20+ LPA</span>
+                        </label>
+                    </div>
+
+                </aside>
+
+
+                <!-- Job List -->
+                <div class="jobs-content">
+
+                    <div class="jobs-topbar">
+                        <p>
+                            Showing <strong id="jobCount">6</strong> jobs
+                        </p>
+                    </div>
+
+                    <div class="job-list" id="jobList">
+
+                        <!-- Job 1 -->
+                        <article class="job-card"
+                                 data-title="Senior Frontend Developer"
+                                 data-company="TechNova"
+                                 data-location="Hyderabad"
+                                 data-type="Full-time"
+                                 data-experience="Senior Level"
+                                 data-salary="10-20"
+                                 data-category="Technology"
+                                 data-salary-value="1800000">
+
+                            <div class="job-company-logo technova">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+
+                            <div class="job-info">
+                                <div class="job-title-row">
+                                    <h3>Senior Frontend Developer</h3>
+                                    <button class="bookmark">
+                                        <i class="fa-regular fa-bookmark"></i>
+                                    </button>
+                                </div>
+
+                                <p class="company-name">TechNova Solutions</p>
+
+                                <div class="job-meta">
+                                    <span>
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        Hyderabad
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-briefcase"></i>
+                                        Full-time
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                                        ₹12 - ₹18 LPA
+                                    </span>
+                                </div>
+
+                                <div class="job-tags">
+                                    <span>React</span>
+                                    <span>JavaScript</span>
+                                    <span>TypeScript</span>
+                                </div>
+                            </div>
+
+                            <div class="job-action">
+                                <span class="posted">2 days ago</span>
+                                <button class="apply-btn">Apply Now</button>
+                            </div>
+                        </article>
+
+
+                        <!-- Job 2 -->
+                        <article class="job-card"
+                                 data-title="Product UI/UX Designer"
+                                 data-company="CreativeLabs"
+                                 data-location="Bangalore"
+                                 data-type="Full-time"
+                                 data-experience="Mid Level"
+                                 data-salary="10-20"
+                                 data-category="Design"
+                                 data-salary-value="1400000">
+
+                            <div class="job-company-logo creativelabs">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+
+                            <div class="job-info">
+                                <div class="job-title-row">
+                                    <h3>Product UI/UX Designer</h3>
+                                    <button class="bookmark">
+                                        <i class="fa-regular fa-bookmark"></i>
+                                    </button>
+                                </div>
+
+                                <p class="company-name">CreativeLabs</p>
+
+                                <div class="job-meta">
+                                    <span>
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        Bangalore
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-briefcase"></i>
+                                        Full-time
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                                        ₹10 - ₹14 LPA
+                                    </span>
+                                </div>
+
+                                <div class="job-tags">
+                                    <span>Figma</span>
+                                    <span>UI Design</span>
+                                    <span>UX Research</span>
+                                </div>
+                            </div>
+
+                            <div class="job-action">
+                                <span class="posted">1 day ago</span>
+                                <button class="apply-btn">Apply Now</button>
+                            </div>
+                        </article>
+
+
+                        <!-- Job 3 -->
+                        <article class="job-card"
+                                 data-title="Data Analyst"
+                                 data-company="DataWorks"
+                                 data-location="Pune"
+                                 data-type="Remote"
+                                 data-experience="Mid Level"
+                                 data-salary="5-10"
+                                 data-category="Technology"
+                                 data-salary-value="850000">
+
+                            <div class="job-company-logo dataworks">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+
+                            <div class="job-info">
+                                <div class="job-title-row">
+                                    <h3>Data Analyst</h3>
+                                    <button class="bookmark">
+                                        <i class="fa-regular fa-bookmark"></i>
+                                    </button>
+                                </div>
+
+                                <p class="company-name">DataWorks India</p>
+
+                                <div class="job-meta">
+                                    <span>
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        Pune
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-house"></i>
+                                        Remote
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                                        ₹7 - ₹10 LPA
+                                    </span>
+                                </div>
+
+                                <div class="job-tags">
+                                    <span>Python</span>
+                                    <span>SQL</span>
+                                    <span>Power BI</span>
+                                </div>
+                            </div>
+
+                            <div class="job-action">
+                                <span class="posted">3 days ago</span>
+                                <button class="apply-btn">Apply Now</button>
+                            </div>
+                        </article>
+
+
+                        <!-- Job 4 -->
+                        <article class="job-card"
+                                 data-title="Digital Marketing Manager"
+                                 data-company="MarketPro"
+                                 data-location="Mumbai"
+                                 data-type="Full-time"
+                                 data-experience="Senior Level"
+                                 data-salary="10-20"
+                                 data-category="Marketing"
+                                 data-salary-value="1600000">
+
+                            <div class="job-company-logo marketpro">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </div>
+
+                            <div class="job-info">
+                                <div class="job-title-row">
+                                    <h3>Digital Marketing Manager</h3>
+                                    <button class="bookmark">
+                                        <i class="fa-regular fa-bookmark"></i>
+                                    </button>
+                                </div>
+
+                                <p class="company-name">MarketPro</p>
+
+                                <div class="job-meta">
+                                    <span>
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        Mumbai
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-briefcase"></i>
+                                        Full-time
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                                        ₹12 - ₹16 LPA
+                                    </span>
+                                </div>
+
+                                <div class="job-tags">
+                                    <span>SEO</span>
+                                    <span>Google Ads</span>
+                                    <span>Analytics</span>
+                                </div>
+                            </div>
+
+                            <div class="job-action">
+                                <span class="posted">4 days ago</span>
+                                <button class="apply-btn">Apply Now</button>
+                            </div>
+                        </article>
+
+
+                        <!-- Job 5 -->
+                        <article class="job-card"
+                                 data-title="Backend Developer"
+                                 data-company="CloudTech"
+                                 data-location="Delhi"
+                                 data-type="Remote"
+                                 data-experience="Mid Level"
+                                 data-salary="10-20"
+                                 data-category="Technology"
+                                 data-salary-value="1250000">
+
+                            <div class="job-company-logo cloudtech">
+                                <i class="fa-solid fa-cloud"></i>
+                            </div>
+
+                            <div class="job-info">
+                                <div class="job-title-row">
+                                    <h3>Backend Developer</h3>
+                                    <button class="bookmark">
+                                        <i class="fa-regular fa-bookmark"></i>
+                                    </button>
+                                </div>
+
+                                <p class="company-name">CloudTech Systems</p>
+
+                                <div class="job-meta">
+                                    <span>
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        Delhi
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-house"></i>
+                                        Remote
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                                        ₹10 - ₹12.5 LPA
+                                    </span>
+                                </div>
+
+                                <div class="job-tags">
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                    <span>AWS</span>
+                                </div>
+                            </div>
+
+                            <div class="job-action">
+                                <span class="posted">5 days ago</span>
+                                <button class="apply-btn">Apply Now</button>
+                            </div>
+                        </article>
+
+
+                        <!-- Job 6 -->
+                        <article class="job-card"
+                                 data-title="Junior Software Engineer"
+                                 data-company="InnovateX"
+                                 data-location="Chennai"
+                                 data-type="Internship"
+                                 data-experience="Entry Level"
+                                 data-salary="0-5"
+                                 data-category="Technology"
+                                 data-salary-value="450000">
+
+                            <div class="job-company-logo innovatex">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+
+                            <div class="job-info">
+                                <div class="job-title-row">
+                                    <h3>Junior Software Engineer</h3>
+                                    <button class="bookmark">
+                                        <i class="fa-regular fa-bookmark"></i>
+                                    </button>
+                                </div>
+
+                                <p class="company-name">InnovateX</p>
+
+                                <div class="job-meta">
+                                    <span>
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        Chennai
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-briefcase"></i>
+                                        Internship
+                                    </span>
+                                    <span>
+                                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                                        ₹4 - ₹5 LPA
+                                    </span>
+                                </div>
+
+                                <div class="job-tags">
+                                    <span>Java</span>
+                                    <span>Spring Boot</span>
+                                    <span>SQL</span>
+                                </div>
+                            </div>
+
+                            <div class="job-action">
+                                <span class="posted">1 week ago</span>
+                                <button class="apply-btn">Apply Now</button>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <div class="no-results" id="noResults">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <h3>No jobs found</h3>
+                        <p>Try changing your search or filters.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= COMPANIES ================= -->
+    <section class="section companies-section" id="companies">
+        <div class="container">
+
+            <div class="section-heading centered">
+                <div>
+                    <span class="section-label">TOP EMPLOYERS</span>
+                    <h2>Work with leading companies</h2>
+                    <p>Explore opportunities from companies hiring talented professionals.</p>
+                </div>
+            </div>
+
+            <div class="company-grid">
+                <div class="company-box">
+                    <i class="fa-brands fa-google"></i>
+                    <span>Google</span>
+                </div>
+
+                <div class="company-box">
+                    <i class="fa-brands fa-microsoft"></i>
+                    <span>Microsoft</span>
+                </div>
+
+                <div class="company-box">
+                    <i class="fa-brands fa-amazon"></i>
+                    <span>Amazon</span>
+                </div>
+
+                <div class="company-box">
+                    <i class="fa-brands fa-meta"></i>
+                    <span>Meta</span>
+                </div>
+
+                <div class="company-box">
+                    <i class="fa-brands fa-apple"></i>
+                    <span>Apple</span>
+                </div>
+
+                <div class="company-box">
+                    <i class="fa-solid fa-building"></i>
+                    <span>Infosys</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+    <section class="cta-section" id="about">
+        <div class="container cta-content">
+
+            <div>
+                <span class="section-label light">FOR EMPLOYERS</span>
+                <h2>Looking for great talent?</h2>
+                <p>
+                    Post your job and connect with thousands of qualified
+                    candidates today.
+                </p>
+            </div>
+
+            <button class="cta-btn">
+                Post a Job
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </span>
+                    Career<span>Hub</span>
+                </a>
+
+                <p>
+                    Helping talented people find meaningful careers
+                    and helping companies find exceptional talent.
+                </p>
+
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>For Job Seekers</h4>
+                <a href="#jobs">Browse Jobs</a>
+                <a href="#">Career Advice</a>
+                <a href="#">Resume Builder</a>
+                <a href="#">Salary Guide</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>For Employers</h4>
+                <a href="#">Post a Job</a>
+                <a href="#">Browse Candidates</a>
+                <a href="#">Pricing</a>
+                <a href="#">Employer Resources</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Company</h4>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 CareerHub. All rights reserved.</p>
+                <p>Made with <i class="fa-solid fa-heart"></i> for job seekers.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================= APPLY MODAL ================= -->
+    <div class="modal-overlay" id="applyModal">
+
+        <div class="modal">
+
+            <button class="modal-close" id="modalClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-icon">
+                <i class="fa-solid fa-paper-plane"></i>
+            </div>
+
+            <h2>Apply for this job</h2>
+            <p id="modalJobTitle">Job Position</p>
+
+            <form id="applicationForm">
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="applicantName" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="applicantEmail" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Resume</label>
+                    <input type="file" accept=".pdf,.doc,.docx" required>
+                </div>
+
+                <button type="submit" class="submit-application">
+                    Submit Application
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+
+    <!-- ================= LOGIN MODAL ================= -->
+    <div class="modal-overlay" id="loginModal">
+
+        <div class="modal login-modal">
+
+            <button class="modal-close" id="loginClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <h2>Welcome Back</h2>
+            <p>Login to continue to CareerHub</p>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter password" required>
+                </div>
+
+                <div class="login-options">
+                    <label>
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="submit-application">
+                    Login
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
