@@ -1,1 +1,144 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RailOne</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Top Header -->
+    <header class="top-bar">
+      <div class="lang-icon">
+        <span>A</span><span>अ</span>
+      </div>
+      <h1 class="logo">Rail<span>One</span></h1>
+      <div class="notification-icon">
+        <i class="fa-regular fa-bell"></i>
+        <span class="badge">8</span>
+      </div>
+    </header>
+
+    <!-- User Greeting -->
+    <div class="user-greeting">
+      <p>Hi, <strong id="username">nilkanth patel!</strong></p>
+    </div>
+
+    <!-- Journey Planner Section -->
+    <section class="section">
+      <h2 class="section-title">Journey Planner</h2>
+      <div class="card-row">
+        <div class="planner-card card-reserved" onclick="selectPlanner('Reserved')">
+          <div class="card-img-placeholder blue-bg">
+            <i class="fa-solid fa-train"></i>
+          </div>
+          <span>Reserved</span>
+        </div>
+        <div class="planner-card card-unreserved" onclick="selectPlanner('Unreserved')">
+          <div class="card-img-placeholder red-bg">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <span>Unreserved</span>
+        </div>
+        <div class="planner-card card-platform" onclick="selectPlanner('Platform')">
+          <div class="card-img-placeholder orange-bg">
+            <i class="fa-solid fa-ticket"></i>
+          </div>
+          <span>Platform</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- More Offerings Section -->
+    <section class="section">
+      <h2 class="section-title">More Offerings</h2>
+      <div class="offerings-grid">
+        
+        <div class="offering-card light-pink" onclick="handleOffering('Search Trains')">
+          <i class="fa-solid fa-route icon-pink"></i>
+          <span>Search Trains</span>
+        </div>
+
+        <div class="offering-card light-green" onclick="handleOffering('PNR Status')">
+          <i class="fa-solid fa-receipt icon-green"></i>
+          <span>PNR Status</span>
+        </div>
+
+        <div class="offering-card light-blue" onclick="handleOffering('Coach Position')">
+          <i class="fa-solid fa-train-subway icon-blue"></i>
+          <span>Coach Position</span>
+        </div>
+
+        <div class="offering-card light-yellow" onclick="handleOffering('Track Your Train')">
+          <i class="fa-solid fa-train-tram icon-yellow"></i>
+          <span>Track Your Train</span>
+        </div>
+
+        <div class="offering-card light-purple" onclick="handleOffering('Order Food')">
+          <i class="fa-solid fa-utensils icon-purple"></i>
+          <span>Order Food</span>
+        </div>
+
+        <div class="offering-card light-gray" onclick="handleOffering('File Refund')">
+          <i class="fa-solid fa-money-bill-transfer icon-gray"></i>
+          <span>File Refund</span>
+        </div>
+
+        <div class="offering-card light-peach" onclick="handleOffering('Rail Madad')">
+          <i class="fa-solid fa-handshake icon-peach"></i>
+          <span>Rail Madad</span>
+        </div>
+
+        <div class="offering-card dark-purple" onclick="handleOffering('Go To WAVES')">
+          <i class="fa-solid fa-paper-plane icon-white"></i>
+          <span>Go To WAVES</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Upcoming Journey Section -->
+    <section class="section upcoming-section">
+      <h2 class="section-title">Upcoming Journey</h2>
+      <div class="ticket-card">
+        <div class="ticket-header">
+          <span id="journey-date">Fri, 11 Sep 26</span>
+        </div>
+        <div class="ticket-body">
+          <div class="station">SECUNDERABAD JN.</div>
+          <div class="station">BILASPUR JN.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+      <a href="#" class="nav-item active">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fa-solid fa-ticket"></i>
+        <span>My Bookings</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fa-regular fa-user"></i>
+        <span>You</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fa-solid fa-bars"></i>
+        <span>Menu</span>
+      </a>
+    </nav>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
