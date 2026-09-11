@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 412px;
+  background-color: #f4f5f9;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 60px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  overflow-x: hidden;
+}
+
+/* Screen Switcher */
+.view {
+  display: none;
+}
+
+.view.active {
+  display: block;
+}
+
+/* Top Header */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #fff;
+}
+
+.lang-icon {
+  border: 1.5px solid #283593;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #283593;
+}
+
+.logo {
+  font-size: 24px;
+  color: #1a237e;
+  font-weight: 700;
+}
+
+.logo span { font-weight: 800; }
+
+.notification-icon {
+  position: relative;
+  font-size: 20px;
+  color: #333;
+}
+
+.notification-icon .badge {
+  position: absolute;
+  top: -5px;
+  right: -6px;
+  background-color: #d32f2f;
+  color: #fff;
+  font-size: 10px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-greeting {
+  padding: 10px 20px;
+  color: #1a237e;
+  background: #fff;
+}
+
+.section { padding: 12px 16px; }
+.section-title { font-size: 16px; color: #0d1b2a; font-weight: 700; margin-bottom: 10px; }
+
+.card-row { display: flex; gap: 10px; }
+.planner-card { flex: 1; background: #fff; border-radius: 12px; padding: 8px; text-align: center; }
+.card-img-placeholder { width: 100%; height: 60px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff; margin-bottom: 6px; }
+.blue-bg { background: linear-gradient(135deg, #42a5f5, #1e88e5); }
+.red-bg { background: linear-gradient(135deg, #ef5350, #e53935); }
+.orange-bg { background: linear-gradient(135deg, #ff7043, #f4511e); }
+
+.offerings-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.offering-card { aspect-ratio: 1; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4px; text-align: center; }
+.offering-card i { font-size: 20px; margin-bottom: 4px; }
+.offering-card span { font-size: 10px; font-weight: 600; color: #37474f; }
+
+.light-pink { background: #fce4ec; } .light-green { background: #e8f5e9; }
+.light-blue { background: #e1f5fe; } .light-yellow { background: #fff8e1; }
+.light-purple { background: #f3e5f5; } .light-gray { background: #eceff1; }
+.light-peach { background: #ffe0b2; } .dark-purple { background: #5c6bc0; }
+.icon-pink { color: #ec407a; } .icon-green { color: #66bb6a; }
+.icon-blue { color: #29b6f6; } .icon-yellow { color: #ffa726; }
+.icon-purple { color: #ab47bc; } .icon-gray { color: #78909c; }
+.icon-peach { color: #ff7043; } .icon-white { color: #fff; }
+
+.home-ticket-card {
+  background: linear-gradient(135deg, #7e57c2, #5e35b1);
+  border-radius: 14px;
+  padding: 14px 18px;
+  color: white;
+  cursor: pointer;
+}
+.ticket-header { font-size: 13px; margin-bottom: 8px; }
+.ticket-body { display: flex; justify-content: space-between; font-size: 12px; font-weight: bold; border-top: 1px dashed rgba(255,255,255,0.4); padding-top: 8px; }
+
+/* BOOKING DETAILS SCREEN STYLES (MATCHING IMAGE) */
+.details-header {
+  background-color: #0066ff;
+  color: white;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.back-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.header-titles h2 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.header-titles p {
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+.sub-header-msg {
+  text-align: center;
+  font-size: 11px;
+  color: #777;
+  padding: 8px 0;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.ticket-wrapper {
+  margin: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Dark Banner Header */
+.ticket-dark-banner {
+  background: #1c1f24;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px 10px;
+  position: relative;
+  background-image: radial-gradient(#2d323b 15%, transparent 16%);
+  background-size: 10px 10px;
+}
+
+.ir-header {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #bbb;
+  margin-bottom: 4px;
+}
+
+.preview-text {
+  font-size: 11px;
+  font-weight: 500;
+  color: #ddd;
+}
+
+.timer-display {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ff2200;
+  letter-spacing: 1px;
+  margin: 2px 0;
+  text-shadow: 0 0 4px rgba(255, 34, 0, 0.4);
+}
+
+.booking-date-label {
+  font-size: 9px;
+  color: #aaa;
+}
+
+.booking-date-value {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffaa00;
+  margin-bottom: 4px;
+}
+
+.booking-code {
+  font-size: 10px;
+  color: #bbb;
+}
+
+.non-transferable {
+  font-size: 9px;
+  color: #888;
+}
+
+.ir-footer {
+  font-size: 11px;
+  color: #ccc;
+  margin-top: 6px;
+}
+
+/* Yellow Bar */
+.yellow-bar {
+  background-color: #ffb700;
+  padding: 6px 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Main Body Ticket Details */
+.ticket-content {
+  padding: 12px 14px;
+  color: #222;
+}
+
+.route-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stn-name {
+  font-size: 12px;
+  font-weight: 800;
+  color: #1a237e;
+}
+
+.route-middle {
+  border-bottom: 1px dashed #888;
+  padding: 0 8px;
+  font-size: 10px;
+  color: #666;
+}
+
+.via-route {
+  font-size: 10px;
+  color: #444;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.passenger-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #555;
+  margin-top: 6px;
+}
+
+.p-count {
+  font-weight: 700;
+  color: #000;
+}
+
+.booking-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  font-size: 9px;
+  color: #555;
+  margin-top: 8px;
+  border-top: 1px dashed #ccc;
+  padding-top: 6px;
+}
+
+.valid-till-label, .valid-till-value {
+  text-align: right;
+  font-weight: bold;
+}
+
+.class-fare {
+  font-size: 10px;
+  font-weight: 700;
+  color: #222;
+  margin-top: 8px;
+}
+
+.ir-number {
+  font-size: 9px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.validity-note {
+  font-size: 8px;
+  color: #d32f2f;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+.warning-box {
+  background-color: #ffebee;
+  color: #c62828;
+  font-size: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin: 10px 14px 14px 14px;
+  line-height: 1.3;
+}
+
+.bottom-link {
+  text-align: center;
+  font-size: 11px;
+  color: #0066ff;
+  font-weight: 600;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+  background-color: #0066ff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.nav-item i { font-size: 16px; margin-bottom: 2px; }
+.nav-item.active { color: #ffffff; font-weight: bold; }
